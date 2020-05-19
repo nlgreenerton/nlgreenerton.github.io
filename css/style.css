@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
-/* @import url("http://fonts.googleapis.com/css?family=Oswald:500,300"); */
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,700");
+@import url("http://fonts.googleapis.com/css?family=Oswald:500,300");
+/* @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,700"); */
 /*
 	Ion by TEMPLATED
 	templated.co @templatedco
@@ -989,6 +989,7 @@
 		background-image: url("../images/slovenia_2019.jpg");
 		background-size: cover;
 		background-position: center center;
+		height: 600px
 		background-repeat: no-repeat;
 		color: #d8d8d8;
 		padding: 14em 0;
