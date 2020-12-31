@@ -152,8 +152,8 @@ jQuery(function(){
             if(!enabledRegions.includes(code)){
               map.reset()
               e.preventDefault();
-              // map.removeAllMarkers();
-              // map.clearSelectedRegions();
+              map.removeAllMarkers();
+              map.clearSelectedRegions();
 
               $('#description-box').empty();
               $('#description-box').html("<p>Pan around on the map and click on any of the <strong style='color:#98bd9a'>highlighted</strong> countries for pictures and details.</p>");
