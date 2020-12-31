@@ -4,7 +4,7 @@ title: 'Glen Arbor, MI, USA'
 categories: travel
 ---
 
-With the pandemic putting all international travel on hold, we had to postpone any nascent plans to visit Colombia to 2021 :calendar:. After months of cabin fever, we agreed that someplace nearby (within reasonable driving distance) was doable, following all CDC guidelines and avoiding interacting with others. As with most trips, we prioritized proximity to nature that offered both hiking and water activities. After looking into several nearby vacation destinations e.g., Door County or somewhere in Michigan's Upper Peninsula, the group agreed upon Glen Arbor, Michigan.
+With the pandemic putting all international travel on hold, we had to postpone any nascent plans to visit Colombia to 2021. After months of cabin fever, we agreed that someplace nearby (within reasonable driving distance) was doable, following all CDC guidelines and avoiding interacting with others. As with most trips, we prioritized proximity to nature that offered both hiking and water activities. After looking into several nearby vacation destinations e.g., Door County or somewhere in Michigan's Upper Peninsula, the group agreed upon Glen Arbor, Michigan.
 
 ### Locale
 
