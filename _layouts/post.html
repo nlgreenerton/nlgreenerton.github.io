@@ -11,12 +11,23 @@ layout: default
         <section class="post-content">
             {{ content }}
         </section>
-        
+
         <footer>
+
             {% if page.previous %}
-            <a href="{{ page.previous.url }}" class="float-left">&larr; Previous post</a> {% endif %}
+            {% for post in site.posts %}
+            {% if post.date < page.date %}
+            {% if post.categories == page.categories %}
+
+            <a href="{{ post.url }}" class="float-left">&larr; Previous post</a>{% break %}{% endif %}{% endif %}{% endfor %}{% endif %}
+
             {% if page.next %}
-            <a href="{{ page.next.url }}" class="float-right">Next post &rarr;</a> {% endif %}
+            {% for post in site.posts reversed %}
+            {% if post.date > page.date %}
+            {% if post.categories == page.categories %}
+            <a href="{{ post.url }}" class="float-right">Next post &rarr;</a>{% break %}{% endif %}{% endif %}{% endfor %}{% endif %}
+
+
         </footer>
 
     </article>

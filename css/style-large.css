@@ -14,10 +14,16 @@
 
 	#banner {
 		padding: 8em 0;
+		height: 24em;
 	}
 
-		#banner h2 {
-			font-size: 2.5em;
+	#innerbanner {
+		padding: 5em;
+		height: 12em;
+	}
+
+		#banner h2, #innerbanner h2 {
+			font-size: 2.6em;
 		}
 
 /* Footer */

@@ -7,7 +7,7 @@
 /* Basic */
 
 	body, input, select, textarea {
-		font-size: 12pt;
+		font-size: 11pt;
 	}
 
 	h2 {
@@ -32,33 +32,39 @@
 		margin: 0 auto;
 	}
 
-		header.major h2 {
+		/* header.major h2 {
 			font-size: 1.5em;
-		}
+		} */
 
-		header.major h2 + p {
+		/* header.major h2 + p {
 			font-size: 1.25em;
 			margin: -0.5em 0 2em 0;
-		}
+		} */
 
 /* Wrapper */
 
 	.wrapper {
-		padding: 3em 0 1em 0;
+		padding: 1.5em 0 1.5em 0;
 	}
 
 /* Banner */
 
 	#banner {
 		padding: 5em 2em 4em 2em;
+		height: 16em;
 	}
 
-		#banner h2 {
+	#innerbanner {
+		padding: 3em;
+		height: 8em;
+	}
+
+		#banner h2, #innerbanner h2 {
 			font-size: 2em;
 		}
 
-		#banner p {
-			font-size: 1.25em;
+		#banner p, #innerbanner p{
+			font-size: 1em;
 		}
 
 /* Main */
@@ -82,4 +88,50 @@
 				margin-left: 0;
 				padding-left: 0;
 				display: block;
+			}
+
+
+/* Map */
+			#map {
+				flex-direction: column;
+				align-items: stretch;
+			}
+
+			#map1 {
+				/* height: 250px; */
+				margin: 0 1em;
+				height: 16em;
+				max-width: 100%
+				/* min-height: 16em; */
+			}
+
+
+
+			#description-box {
+				max-width: 100%;
+				margin: 1em 1em 0 1em;
+			}
+
+/* Image */
+
+			.imagecont img {
+				width: fit-content;
+				max-width: 100%;
+				max-height: 14em;
+			}
+
+			.imagecont {
+				flex-direction: column;
+			}
+
+/* Plot */
+
+			.plotcont img {
+				width: fit-content;
+				max-width: 100%;
+
+			}
+
+			.plotcont {
+				flex-direction: column;
 			}

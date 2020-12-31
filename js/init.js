@@ -11,7 +11,7 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			
+
 			// Global.
 				global: {
 					range: '*',
@@ -77,16 +77,16 @@
 						collapse: 2
 					}
 				}
-
+		
 		},
 		plugins: {
 			layers: {
-				
+
 				// Config.
 					config: {
 						transform: true
 					},
-				
+
 				// Navigation Panel.
 					navPanel: {
 						animation: 'pushX',
@@ -116,9 +116,9 @@
 	});
 
 	$(function() {
-		
+
 		// jQuery ready stuff.
-		
+
 	});
 
 })(jQuery);

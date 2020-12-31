@@ -13,5 +13,15 @@
 /* Banner */
 
 	#banner {
-		padding: 9em 0;
+		padding: 12em 0;
+		height: 28em;
+	}
+
+	#innerbanner {
+		padding: 5em 0;
+		height: 14em;
+	}
+
+	#banner h2, #innerbanner h2 {
+		font-size: 3em;
 	}

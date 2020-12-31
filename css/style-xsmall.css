@@ -11,7 +11,7 @@
 	}
 
 	body, input, select, textarea {
-		font-size: 12pt;
+		font-size: 11pt;
 	}
 
 /* List */
@@ -61,4 +61,50 @@
 
 	#banner {
 		padding: 5em 2em 4em 2em;
+		height: 16em;
 	}
+
+	#innerbanner {
+		padding: 2.8em;
+		height: 8em;
+	}
+
+		#banner h2, #innerbanner h2 {
+			font-size: 1.8em;
+		}
+
+		#banner p, #innerbanner p {
+			font-size: .8em;
+		}
+
+		/* Map */
+		#map {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		#map1 {
+			margin: 0 1em;
+			height: 16em;
+		}
+
+		#description-box {
+			max-width: 100%;
+			margin: 1em 1em 0 1em;
+		}
+
+		img.travel.blog {
+			height: 10rem;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		.float-left {
+        float: left;
+				margin: 0 0 1em 0;
+    }
+
+    .float-right {
+        float: right;
+				margin: 0 0 1em 0;
+    }

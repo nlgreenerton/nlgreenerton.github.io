@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+  {% include /head.html %}
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="/css/jquery-jvectormap.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery-jvectormap.js"></script>
+    <script src="/src/jquery-mousewheel.js"></script>
+
+    <script src="/js/jvectormap.js"></script>
+
+    <script src="/src/abstract-element.js"></script>
+    <script src="/src/abstract-canvas-element.js"></script>
+    <script src="/src/abstract-shape-element.js"></script>
+
+    <script src="/src/svg-element.js"></script>
+    <script src="/src/svg-group-element.js"></script>
+    <script src="/src/svg-canvas-element.js"></script>
+    <script src="/src/svg-shape-element.js"></script>
+    <script src="/src/svg-path-element.js"></script>
+    <script src="/src/svg-circle-element.js"></script>
+    <script src="/src/svg-image-element.js"></script>
+    <script src="/src/svg-text-element.js"></script>
+
+    <script src="/src/vml-element.js"></script>
+    <script src="/src/vml-group-element.js"></script>
+    <script src="/src/vml-canvas-element.js"></script>
+    <script src="/src/vml-shape-element.js"></script>
+    <script src="/src/vml-path-element.js"></script>
+    <script src="/src/vml-circle-element.js"></script>
+    <script src="/src/vml-image-element.js"></script>
+
+    <script src="/src/map-object.js"></script>
+    <script src="/src/region.js"></script>
+    <script src="/src/marker.js"></script>
+
+    <script src="/src/vector-canvas.js"></script>
+    <script src="/src/simple-scale.js"></script>
+    <script src="/src/ordinal-scale.js"></script>
+    <script src="/src/numeric-scale.js"></script>
+    <script src="/src/color-scale.js"></script>
+    <script src="/src/legend.js"></script>
+    <script src="/src/data-series.js"></script>
+    <script src="/src/proj.js"></script>
+    <script src="/src/map.js"></script>
+
+    <script src="/js/jquery-jvectormap-world-mill.js"></script>
+    <script>
+
+var     enabledRegions = ['CA','CH','IT','JP','PT','SI','US'];
+        markers = {
+              'CA': [{latLng: [45.8372, -78.3791], name: 'Algonquin Provincial Park',link: '/travel/2019/01/01/in_progress.html'}],
+              'CH': [{latLng: [46.1817, 6.8748], name: 'Champéry',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [47.3769, 8.5417], name: 'Zürich',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [46.5197, 6.6323], name: 'Lausanne',link: '/travel/2019/01/01/in_progress.html'}],
+              'IT': [{latLng: [45.6495, 13.7768], name: 'Trieste',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [43.7696, 11.2558], name: 'Florence',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [41.9028, 12.4964], name: 'Rome',link: '/travel/2019/01/01/in_progress.html'}],
+              'JP': [{latLng: [34.3853, 132.4553], name: 'Hiroshima',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [35.6804, 139.7690], name: 'Tokyo',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [34.8154, 134.6856], name: 'Himeji',link: '/travel/2019/01/01/in_progress.html'}],
+              'PT': [{latLng: [37.7804, -25.4970], name: 'São Miguel Island',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [38.7223, -9.1393], name: 'Lisbon',link: '/travel/2019/01/01/in_progress.html'}],
+              'SI': [{latLng: [46.0569, 14.5058], name: 'Ljubljana',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [45.5283, 13.5683], name: 'Piran',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [46.3376, 13.5517], name: 'Bovec',link: '/travel/2019/01/01/in_progress.html'}],
+              'US': [{latLng: [32.7765, -79.9311], name: 'Charleston',link: '/travel/2019/10/18/Charleston_SC.html'},
+                        {latLng: [44.8977, -85.9889], name: 'Glen Arbor',link: '/travel/2020/08/22/Glen_Arbor_MI.html'},
+                        {latLng: [47.6062, -122.3321], name: 'Seattle',link: '/travel/2019/01/01/in_progress.html'},
+                        {latLng: [42.3314, -83.0458], name: 'Detroit',link: '/travel/2019/01/01/in_progress.html'}]
+              };
+jQuery(function(){
+  map = new jvm.Map({
+    container: $('#map1'),
+    map: 'world_mill',
+    focusOn: {
+            x: 0.5,
+            y: 0.5,
+            scale: 2,
+            animate: true
+            },
+    zoomMax: 16,
+    regionsSelectable: true,
+    regionsSelectableOne: true,
+    series: {
+            regions: [{
+              attribute: {
+                'fill': '#98bd9a',
+                'fill-opacity': .75
+              },
+              values: {
+                'CA': 1,
+                'CH': 1,
+                'IT': 1,
+                'JP': 1,
+                'PT': 1,
+                'SI': 1,
+                'US': 1
+              },
+            }],
+    },
+    regionStyle: {
+            initial: {
+              fill: '#a3a69b',
+              "fill-opacity": .4,
+              stroke: '#3c3d3e',
+              "stroke-width": .2,
+              "stroke-opacity": 1
+            },
+            hover: {
+              "fill-opacity": 1,
+              cursor: 'pointer',
+              "stroke-width": 2,
+            },
+            selected: {
+              fill: '#eaece7',
+              "fill-opacity": 1,
+            },
+    },
+    backgroundColor: 'transparent',
+    markerStyle: {
+            initial: {
+              fill: '#f25757',
+              // "fill-opacity": 1,
+              stroke: '#f25757',
+              "stroke-width": 2,
+              // "stroke-opacity": 1,
+              r: 4
+            },
+            hover: {
+              "fill-opacity": 0.8,
+              cursor: 'pointer'
+            },
+            selected: {
+              fill: '#eaece7'
+            },
+    },
+    onRegionTipShow: function(e,tip,code){
+            if(!enabledRegions.includes(code)){
+              e.preventDefault()
+            }
+    },
+    onRegionOver: function(e,code){
+            if(!enabledRegions.includes(code)){
+              e.preventDefault()
+            }
+    },
+    onRegionClick: function(e,code){
+            if(!enabledRegions.includes(code)){
+              map.reset()
+              e.preventDefault();
+              // map.removeAllMarkers();
+              // map.clearSelectedRegions();
+
+              $('#description-box').empty();
+              $('#description-box').html("<p>Pan around on the map and click on any of the <strong style='color:#98bd9a'>highlighted</strong> countries for pictures and details.</p>");
+
+            }
+            else{
+              map.removeAllMarkers();
+              map.addMarkers(markers[code]);
+              var mean_lat = 0;
+              var mean_lng = 0;
+              var i;
+              for (i = 0; i < markers[code].length; i++) {
+                mean_lat += markers[code][i].latLng[0];
+                mean_lng += markers[code][i].latLng[1];
+              }
+              mean_lat = mean_lat/markers[code].length;
+              mean_lng = mean_lng/markers[code].length;
+
+              map.setFocus({lat:mean_lat,lng:mean_lng,animate:true,scale:7})
+              $('#description-box').empty();
+              // $('#description-box').append(code);
+              $('#description-box').html("<h3>"+map.mapData.paths[code].name+"</h3>");
+              for (i = 0; i < markers[code].length; i++) {
+                // console.log(i,markers[code][i].name)
+                $('#description-box').append("<a href="+markers[code][i].link+">"+markers[code][i].name+"</a><br>")
+
+              }
+              // console.log(map);
+
+              // $('#description-box').css('display','inline')
+              // map.addMarker('key',{latLng:[mean_lat-12,mean_lng]},'abcde')
+            }
+
+    },
+  })
+})
+// $('#map1').
+  </script>
+  </head>
+
+  <body id="top">
+
+        {% include /header.html %}
+
+        {{ content }}
+
+        {% include /footer.html %}
+
+    </body>
+
+</html>

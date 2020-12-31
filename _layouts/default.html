@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
-    
-    {% include /head.html %}
 
-	<body id="top">
+    {% include /head.html %}
+    <head>
+      <script src="/js/lightbox-plus-jquery.js"></script>
+      <script>
+          lightbox.option({
+            'resizeDuration': 200,
+            'fadeDuration': 200,
+            'positionFromTop': 75,
+            'albumLabel': "%1 / %2",
+            'imageFadeDuration':200
+          })
+      </script>
+
+
+    </head>
+	   <body id="top">
 
         {% include /header.html %}
 

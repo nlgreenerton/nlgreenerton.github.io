@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<!-- Banner -->
+<section id="innerbanner">
+    <div class="inner">
+        <h2>Data Science</h2>
+    </div>
+</section>
+<section class="wrapper style1">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+        <section class="alt box">
+            <p>Although I was doing experimental research for all of my academic research, it always included some component of computational analysis. At first, I was tracking and analyzing colloidal particle trajectories over tens of thousands of images. I later was solving a system of differential equations to determine the interfacial tension in images of an oil-water interface. Moving forward, it seemed like fully immersing myself into data analysis was an obvious next step, so I took an immersive, project-based course. I later built on my initial projects to make them comprehensive and learn new techniques at the same time. In this section, I have described the thought process and inspiration behind some of my work. Accompanying notebooks are available at <a href="{{ site.github }}{{ site.github_username }}">my Github</a>.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+<section> <!-- id="main">  class="wrapper style1"> -->
+    {% for post in site.categories.data_science %}
+      {% capture thecycle %}{% cycle 'style2', 'style1' %}{% endcapture %}
+        <div class="wrapper {{ thecycle }}">
+            <header class="major">
+                <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+            </header>
+            <section class="container">
+                {{ post.excerpt }}
+            </section>
+            <section class="special">
+                <ul class="actions">
+                    <li><a href="{{ site.baseurl }}{{ post.url }}" class="button {% cycle 'alt', ''%}">Read More</a></li>
+                </ul>
+            </section>
+        </div>
+    {% endfor %}
+</section>

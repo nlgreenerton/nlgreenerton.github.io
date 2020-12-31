@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  {% include /head.html %}
+
+  <head>
+    <!-- <title>JQVMap - World Map</title> -->
+    <link href="./css/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.vmap.js"></script>
+    <script type="text/javascript" src="./js/jquery.vmap.world.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/jquery.vmap.fun.js"></script>
+    <script>
+      var map;
+
+      jQuery(document).ready(function () {
+
+        map = jQuery('#vmap').vectorMap({
+          map: 'world_en',
+          backgroundColor: '#8bb2bb',
+          color: '#4b7581',
+          borderColor: '#242513',
+          borderWidth: 1,
+          borderOpacity: 0.4,
+          selectedColor: '#eaece7',
+          selectedRegions: null,
+          enableZoom: true,
+          showTooltip: true,
+          hoverOpacity: 0.6,
+          colors: {
+            ca: '#98bd9a',
+            ch: '#98bd9a',
+            it: '#98bd9a',
+            jp: '#98bd9a',
+            pt: '#98bd9a',
+            si: '#98bd9a',
+            us: '#98bd9a'
+          },
+          onRegionSelect: function(event, code, region){
+            if(enabledRegions.includes(code)){
+              countrySelected = true;
+              displayBoxText(code);
+              // $('#description-box').show();
+              // $('#description-box').append('<div class="center-text" id="modal-header">' + currentCountrySelected + '</div>');
+            }
+            else{
+              $('#description-box').hide();
+            }
+          },
+          onRegionDeselect: function(event, code, region){
+            if(enabledRegions.includes(code)){
+              countrySelected = false;
+              $('#description-box').fadeOut();
+            }
+            else{
+              $('#description-box').hide();
+            }
+          },
+          onRegionClick: function (event, code, region){
+            if(!enabledRegions.includes(code)){
+              $('#description-box').fadeOut();
+              event.preventDefault();
+            }
+          },
+          onLabelShow: function (event, code, region){
+            event.preventDefault();
+          },
+        });
+      });
+
+
+    </script>
+
+  </head>
+
+  <body id="top">
+
+        {% include /header.html %}
+
+        {{ content }}
+
+        {% include /footer.html %}
+
+    </body>
+
+</html>
