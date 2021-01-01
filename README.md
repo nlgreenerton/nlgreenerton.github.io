@@ -1,1 +1,1 @@
-stylized blog available at [nlgreenerton.github.io](nlgreenerton.github.io)
+stylized blog available at [nlgreenerton.github.io](http://nlgreenerton.github.io)
