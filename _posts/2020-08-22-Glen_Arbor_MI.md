@@ -10,7 +10,7 @@ With the pandemic putting all international travel on hold, we had to postpone a
 
 I hadn't heard of Glen Arbor before, but it is along the western coast of Michigan below the Leelanau Peninsula and just east of the [Sleeping Bear Dunes National Lakeshore](https://www.nps.gov/slbe/index.htm). It is one of many picturesque beach towns scattered along the eastern coast of Lake Michigan, boasting a strip of restaurants, wineries, and one of the larger markets in the area. Walking distance to [Cherry Republic](https://cherryrepublic.com/locations/glen-arbor/) for wine, ice cream, and cherry-themed edible gifts certainly didn't hurt. Glen Arbor was the perfect home base for a week - a 20 minute drive from any of the hikes and beaches to visit during the day and we could walk to the grocery in the evenings.
 
-<p class="imagecont">
+<p class="imagecont three">
   <a href="/assets/glen_arbor/m22.jpg" data-lightbox="glen_arbor" data-title="M22 wine patio"><img src="/assets/glen_arbor/m22.jpg"/></a>
   <a href="/assets/glen_arbor/cyclery.jpg" data-lightbox="glen_arbor" data-title="The Cyclery bike rental shop"><img src="/assets/glen_arbor/cyclery.jpg" /></a>
   <a href="/assets/glen_arbor/cherry_republic.jpg" data-lightbox="glen_arbor" data-title="Cherry Republic"><img src="/assets/glen_arbor/cherry_republic.jpg" /></a>
@@ -26,7 +26,7 @@ A real highlight was the Sleeping Bear Heritage Trail: a 20-mile mostly paved tr
 
 I'd also highly recommend some water excursions, either on Lake Michigan or one of the inline lakes and rivers. We didn't have enough people to merit renting a boat, and the usual ferry trips to/from Manitou Island were cancelled for the season, but we did a kayak trip down the [Crystal River](https://www.leelanauconservancy.org/naturalarea/crystal-river-natural-area/), starting at the Crystal River trailhead and ending in Glen Arbor. This wasn't quite the lazy river float trip we'd anticipated: not paddling certainly led to collisions with low-hanging branches! Despite that, it was definitely geared towards novice paddlers (which we are) looking to spend several relaxing hours in the water.
 
-<p class="imagecont">
+<p class="imagecont three">
   <a href="/assets/glen_arbor/campground_beach.jpg" data-lightbox="glen_arbor" data-title="Secluded beach at the D.H. Day campground">
   <img src="/assets/glen_arbor/campground_beach.jpg"/></a>
   <a href="/assets/glen_arbor/kayaking.jpg" data-lightbox="glen_arbor" data-title="Kayaking down the Crystal River"><img src="/assets/glen_arbor/kayaking.jpg"/></a>

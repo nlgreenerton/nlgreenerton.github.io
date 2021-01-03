@@ -514,7 +514,14 @@
 
 		}
 
-		.imagecont img {
+		.imagecont.two img {
+			border-radius: 6px;
+			max-width: 24em;
+			object-fit: cover;
+
+		}
+
+		.imagecont.three img {
 			border-radius: 6px;
 			max-width: 20em;
 			object-fit: cover;

@@ -127,7 +127,7 @@
 				width: 100%;
 			}
 
-			.imagecont img {
+			.imagecont.three img {
 				/* max-height: 11em; */
 				max-width: 16em;
 			}
