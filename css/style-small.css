@@ -114,10 +114,16 @@
 
 /* Image */
 
-			.imagecont img {
+			.imagecont.three img {
 				width: fit-content;
 				max-width: 100%;
 				max-height: 14em;
+			}
+
+			.imagecont.two img {
+				width: fit-content;
+				max-width: 100%;
+				max-height: 22em;
 			}
 
 			.imagecont {
