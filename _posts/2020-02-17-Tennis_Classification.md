@@ -22,7 +22,7 @@ I used the information schema from one table as a key to find the mismatched dat
 
 ### Data Selection on PostgreSQL
 
-I needed to find the main draws from all the Grand Slams, who of those players survived to the R16, and then the matches everyone played in the six weeks prior. I chose the six weeks as an arbitrary interval to suss out any players on a "hot streak".
+I needed to find the main draws from all the Grand Slams, who of those players survived to the R16, and then the matches everyone played in the six weeks prior. I chose the six weeks as an arbitrary interval to suss out any players on a "hot streak."
 
 The aforementioned tourney_date issue caused problems when collecting previous matches by dates:
 * Grand Slam qualifying round (Q1, Q2, Q3) matches were labeled with the same tourney_date as the start of the main draw despite being played the week before
