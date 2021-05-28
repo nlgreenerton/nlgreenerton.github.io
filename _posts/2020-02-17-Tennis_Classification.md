@@ -253,22 +253,22 @@ Bagged, the best estimator from the reduced feature set gets closer still to the
 
 I wanted to understand which players my estimator was misclassifying to better understand its performance. Using the best estimator from the reduced feature set as my predictor, I began plotting the true positives, false positives, and false negatives of each feature individually, starting with the feature with the largest coefficient from the base (logistic) estimator. Since the features were scaled, the absolute value of the coefficients give a measure similar to feature importance. The most influential features were the seed, ranking, and ranking points; plots of these showed clear delineation between true positives, false positives, and false negatives. Compared to the actual R16 qualifiers that shown on the box plots, the false negatives fell beyond the 75th percentile of the true positives whereas the false positives were understandably located closer to the true positives. Comparatively, the false negatives and false positives from match stats-based features (break points, first serves won, double faults, and opponent ranking points) were more randomly distributed onto the true positives.
 <div class="row">
-<p class="6u plotcont">
+<div class="6u">
   <a href="/assets/tennis/reduced_features_player_seed_boxplot.jpg" data-lightbox="plots" data-title="player seed box plot" class="image fit"><img src="/assets/tennis/reduced_features_player_seed_boxplot.jpg" /></a>
-</p>
-<p class="6u plotcont">
+</div>
+<div class="6u">
   <a href="/assets/tennis/reduced_features_break_points_faced_boxplot.jpg" data-lightbox="plots" data-title="break points faced per service point box plot" class="image fit"><img src="/assets/tennis/reduced_features_break_points_faced_boxplot.jpg" /></a>
-</p>
+</div>
 </div>
 It seemed that any influence from the match-based stats was overridden by the seeding and ranking. Using those together with the match-based stats didn't reveal any of these underdog R16 qualifiers, so I reran the analysis with only the stats affected by matches in the previous weeks. While I didn't expect the results to outperform the prior estimators, I hoped it would find more players outside the top 16 seeds who were predicted to reach R16. It did find three additional R16 qualifiers outside the top 16, but it also cost many more false positives outside the top 16.
 
 <div class="row">
-<p class="6u plotcont">
+<div class="6u">
   <a href="/assets/tennis/false_negatives.jpg" data-lightbox="plots" data-title="false negatives from different feature sets" class="image fit"><img src="/assets/tennis/false_negatives.jpg" /></a>
-</p>
-<p class="6u plotcont">
+</div>
+<div class="6u">
   <a href="/assets/tennis/false_positives.jpg" data-lightbox="plots" data-title="false positives from different feature sets" class="image fit"><img src="/assets/tennis/false_positives.jpg" /></a>
-</p>
+</div>
 </div>
 
 So in the end, the tournament seeding just slightly outperformed the reduced feature set, which itself was heavily dependent on the tournament seeding. It isn't to say that recent match successes were irrelevant in this data, but they weren't enough to propel an underdog all the way to the round of 16. As for the lofty goal of guessing whether a given player would make this round, the chances are high that if he is in the top 16 seeds, he'll advance. Outside those, someone in the next 8 seeds might have a chance, especially if he has dominant serve statistics in his previous matches. Indeed, being able to hold one's serve is key to success in any tennis match, and those who excel at it are more likely to advance to the later rounds of any tournament.

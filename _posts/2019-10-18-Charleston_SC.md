@@ -34,15 +34,15 @@ The downtown peninsula is small and easy to explore on foot. Downtown is really 
 But this trip was truly all about the eats: salty, crispy biscuits with pimento cheese at [Callie's Hot Little Biscuit](https://calliesbiscuits.com/pages/hlb-upper-king), briny oysters at [Rappahannock Oyster Bar](https://www.rroysters.com/restaurants/rappoysterbarchs), and unctuous crab rice at [Hannibal's Kitchen](http://hannibalkitchen.com/), Sometimes drinks came with a view, like at the rooftop bar at [The Vendue](https://www.thevendue.com/charleston-dining/the-rooftop/) and the extremely picturesque [Citrus Club](https://www.thedewberrycharleston.com/drinks-dining). Other times, delicious drinks were paired with surprisingly tasty bread pudding at [Doar Bros](https://www.doarbros.com/). We indulged our collective sweet tooth with pie at [Miller's All Day](https://millersallday.com/) and cupcakes at [Sugar's Bakeshop](http://www.sugarbake.com/). Somehow we still had room for local seafood at [The Grocery](http://www.thegrocerycharleston.com/) and [Leon's](http://leonsoystershop.com/). Even writing it all down now, I'm shocked we ate so much over a long weekend. Everything was delightful but I'm not sure our waistlines would have survived staying any longer.
 
 <div class="row">
-<div class="4u">
-<a class="image fit" href="/assets/charleston/rappahannock_oyster_bar.jpg" data-lightbox="charleston" data-title="Oyster shooters at Rappahannock Oyster Bar"><img src="/assets/charleston/rappahannock_oyster_bar.jpg"/></a>
-</div>
-<div class="4u">
-<a class="image fit" href="/assets/charleston/the_grocery.jpg" data-lightbox="charleston" data-title="Paella-esque seafood atop Carolina rice at The Grocery"><img src="/assets/charleston/the_grocery.jpg" /></a>
-</div>
-<div class="4u">
-<a class="image fit" href="/assets/charleston/millers_pie.jpg" data-lightbox="charleston" data-title="Post-brunch pie at Miller's All Day"><img src="/assets/charleston/millers_pie.jpg" /></a>
-</div>
+<p class="4u">
+<a class="image fit short" href="/assets/charleston/rappahannock_oyster_bar.jpg" data-lightbox="charleston" data-title="Oyster shooters at Rappahannock Oyster Bar"><img src="/assets/charleston/rappahannock_oyster_bar.jpg"/></a>
+</p>
+<p class="4u">
+<a class="image fit short" href="/assets/charleston/the_grocery.jpg" data-lightbox="charleston" data-title="Paella-esque seafood atop Carolina rice at The Grocery"><img src="/assets/charleston/the_grocery.jpg" /></a>
+</p>
+<p class="4u">
+<a class="image fit short" href="/assets/charleston/millers_pie.jpg" data-lightbox="charleston" data-title="Post-brunch pie at Miller's All Day"><img src="/assets/charleston/millers_pie.jpg" /></a>
+</p>
 </div>
 
 ### Housing

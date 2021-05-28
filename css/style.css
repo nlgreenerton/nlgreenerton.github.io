@@ -151,15 +151,15 @@
 		text-align: right;
 	}
 
-    .float-left {
-        float: left;
-				margin: 0 1em 1em 0;
-    }
+  .float-left {
+      float: left;
+			margin: 0 1em 1em 0;
+  }
 
-    .float-right {
-        float: right;
-				margin: 0 0 1em 1em;
-    }
+  .float-right {
+      float: right;
+			margin: 0 0 1em 1em;
+  }
 
 /* Section/Article */
 
@@ -505,6 +505,13 @@
 			.image.fit img {
 				display: block;
 				width: 100%;
+			}
+
+			.image.fit.short img {
+				display: block;
+				/* width: 100% */
+				object-fit: cover;
+				max-height: 24em;
 			}
 
 		.imagecont {
