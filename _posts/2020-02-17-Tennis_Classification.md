@@ -65,6 +65,7 @@ I split the data into train/validation/test sets along tournament lines, ending 
 I tried a handful of models and hyperparameters through GridSearchCV with the five folds of GroupKFold, optimizing for precision, recall, and f1 separately. In hindsight, overkill, but I was running the fittings before having decided the proper scoring metric. I ended up with three best estimators for each of eight models, then compared them by looking at their ability to correctly predict the R16 qualifiers in my test set. I used the predict_proba method to find the probability of a player in the main draw to make the R16, then assigned the top 16 probable candidates as the predicted 16. Always predicting 16 Trues led precision to equal recall (and f1, as their harmonic mean). It was possible to have multiple players with the same odds, so in those cases I used the minimum of precision or accuracy to compare different estimators as to not artificially inflate the score when predicting > 16 Trues per tournament. In the end, the [XGBoost](https://xgboost.readthedocs.io/en/latest/python/python_intro.html) model with hyperparameters optimizing recall yielded the best precision and/or recall.
 
 <table class="12u dataframe">
+  <caption>best scores for fitted models</caption>
   <thead class="dataframe">
     <tr>
       <th></th>
@@ -132,6 +133,7 @@ The ATP Tour was dominated by the top seeds, at least in terms of championships,
 Motivated by my classifier underperforming the simple seedings, I wondered if the inclusion of too many features was increasing the variance in my predictor while sacrificing any benefits those weaker features were imparting. I decided to reduce my feature set via [BorutaPy](https://danielhomola.com/feature%20selection/phd/borutapy-an-all-relevant-feature-selection-method/), a Python implementation of the Boruta feature selection package.[^1] I retained 10 of the 26 features and repeated the GridSearchCV as before and found the best classifier was a logistic regression, and it slightly outperformed the XGBoost classifier at 0.6875.
 
 <table class="12u dataframe">
+  <caption>best scores for fitted models using reduced feature set</caption>
   <thead class="dataframe">
     <tr>
       <th></th>
@@ -192,10 +194,11 @@ Motivated by my classifier underperforming the simple seedings, I wondered if th
   </tbody>
 </table>
 
-### Reducing Features and Refitting Estimators
+<!-- ### Reducing Features and Refitting Estimators -->
 I wanted to try another method of reducing variance that I'd seen. It's been shown that, for some cases, the benefits of feature reduction can be matched with bagging while avoiding the computational cost of feature reduction.[^2] In this case, I don't have a prohibitive number of features but I wanted to try it regardless. I chose the best estimator from the full feature set and ran GridSearchCV to determine the proper number of estimators, feature subsets, and sample subsets. Indeed, the bagged XGBoost classifier matched the precision of the reduced feature set.
 
 <table class="12u dataframe">
+  <caption>best scores for bagged XGBoost classifier</caption>
   <thead class="dataframe">
     <tr>
       <th></th>
@@ -223,6 +226,7 @@ I wanted to try another method of reducing variance that I'd seen. It's been sho
 I then repeated the bagging optimization for the reduced feature set using the optimized logistic regression.
 
 <table class="12u dataframe">
+  <caption>best scores for bagged XGBoost classifier for reduced feature set</caption>
   <thead class="dataframe">
     <tr>
       <th></th>
@@ -276,4 +280,4 @@ So in the end, the tournament seeding just slightly outperformed the reduced fea
 #### References
 
 [^1]: Kursa, M., & Rudnicki, W. (2010). Feature Selection with the Boruta Package. Journal of Statistical Software, 36(11), 1 - 13. doi: http://dx.doi.org/10.18637/jss.v036.i11
-[^2]: Munson M.A., Caruana R. (2009) On Feature Selection, Bias-Variance, and Bagging. In: Buntine W., Grobelnik M., Mladeni&#x107; D., Shawe-Taylor J. (eds) Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2009. Lecture Notes in Computer Science, vol 5782. Springer, Berlin, Heidelberg. doi: http://dx.doi.org/10.1007/978-3-642-04174-7_10
+[^2]: Munson M.A., Caruana R. (2009) On Feature Selection, Bias-Variance, and Bagging. In: Buntine W., Grobelnik M., Mladeni&#263; D., Shawe-Taylor J. (eds) Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2009. Lecture Notes in Computer Science, vol 5782. Springer, Berlin, Heidelberg. doi: http://dx.doi.org/10.1007/978-3-642-04174-7_10
