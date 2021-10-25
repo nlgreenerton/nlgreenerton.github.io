@@ -226,7 +226,7 @@ I wanted to try another method of reducing variance that I'd seen. It's been sho
 I then repeated the bagging optimization for the reduced feature set using the optimized logistic regression.
 
 <table class="12u dataframe">
-  <caption>best scores for bagged XGBoost classifier for reduced feature set</caption>
+  <caption>best scores for bagged logistic classifier for reduced feature set</caption>
   <thead class="dataframe">
     <tr>
       <th></th>
