@@ -50,13 +50,13 @@ Service game stats for those previous matches included:
 * mean ranking and points total of the Grand Slam entrant
 * mean ranking and points total of his previous opponent(s)
 
-Some of the features resulted in NaN values that needed to be replaced. If the player hadn't played in any events leading up to the Grand Slam, he has no match-specific stats so I replaced those NaN values with zeroes. Similarly, players without prior match stats had NaN values for mean ranking and points totals for himself and his previous opponents. His ranking and points total were probably very similar to the ranking and points total he had at the start of the Grand Slam, so I dropped those. For opponent rankings, I couldn't think of a proper way to fill NaNs so I have to dropped that feature but filled the opponent mean points NaNs with zeroes.
+Some of the features resulted in NaN values that needed to be replaced. If the player hadn't played in any events leading up to the Grand Slam, he has no match-specific stats so I replaced those NaN values with zeroes. Similarly, players without prior match stats had NaN values for mean ranking and points totals for himself and his previous opponents. His ranking and points total were probably very similar to the ranking and points total he had at the start of the Grand Slam, so I dropped those. For opponent rankings, I couldn't think of a proper way to fill NaNs so I dropped that feature but filled the opponent mean points NaNs with zeroes.
 
 Some of the player-specific details about Grand Slam entrants also had NaNs. Only the top 32 players are seeded but setting the rest to zero seemed both wrong and oversimplified. I instead used the rankings and points totals to assign seeds to the rest of the draw. I followed the same methodology for unranked players, sorting by points totals then assigning one greater than the maximum ranking in the draw. If players had NaNs as their points totals, I replaced those with zeroes.
 
 The player entry column is mostly NaNs but categorical, so I turned that into a dummy variable. I also changed the player hand column to a dummy variable after replacing the unknown values (U) with the more likely right-handed (R).
 
-I used the [SimpleImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer) from scikit-learn to fill missing player heights with the average player height in a given Grand Slam draw. Since I separated train/validation/test sets by tournament, I avoided data leakage by imputing player heights along group lines also.
+I used the [SimpleImputer](https://scikit-learn.org/stable/modules/generated/sklearn.impute.SimpleImputer.html#sklearn.impute.SimpleImputer) from scikit-learn to fill missing player heights with the average player height in a given Grand Slam draw. Since I separated train/validation/test sets by tournament, I avoided data leakage by imputing player heights along tournament lines also.
 
 ### Fitting Estimators
 
