@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 'Minor League Baseball Pitch Analysis'
-categories: data_science
 mathjax: true
+categories: data_science
 ---
 
 I received an assessment after applying for an analytics position with a baseball team. Anyone who knows me knows this would be a dream job in a way, having played softball basically my whole life. I dove right into the assignment, which had the stipulation of only spending 1 - 2 hours on it. I did try to stay within the limits, but the subject matter being one of those magical marriages between personal and professional interests, I continued on afterwards to practice 1) scaling and sampling techniques and 2) creating useful visualizations for the results.
